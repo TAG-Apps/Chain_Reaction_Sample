@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity(), OnProgressLoadingListener {
             binding.waitingProgress.isVisible = true
     }
 
+
     override fun hideProgress() {
         if (binding.waitingProgress.isVisible)
             binding.waitingProgress.isVisible = false
