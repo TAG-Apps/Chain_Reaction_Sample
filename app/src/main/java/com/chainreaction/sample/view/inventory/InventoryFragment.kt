@@ -18,12 +18,12 @@ import com.chainreaction.sample.view.fragment_factory.ParentFragment
 import com.chainreaction.sample.view.interfaces.OnAdapterItemClicked
 import com.chainreaction.sample.viewmodel.InventoryViewModel
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+
 class InventoryFragment :  ParentFragment(R.layout.fragment_inventory), OnAdapterItemClicked {
 
+
     private val mBinding: FragmentInventoryBinding by viewBinding()
+
 
     private val mViewModel: InventoryViewModel by hiltNavGraphViewModels(R.id.nav_graph)
     private val mAdapter: InventoryAdapter by lazy { InventoryAdapter(this) }
@@ -70,8 +70,5 @@ class InventoryFragment :  ParentFragment(R.layout.fragment_inventory), OnAdapte
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
 
-    }
 }

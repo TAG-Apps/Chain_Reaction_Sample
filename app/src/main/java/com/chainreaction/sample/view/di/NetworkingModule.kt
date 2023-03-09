@@ -29,7 +29,7 @@ object NetworkingModule {
 
 
     @Provides
-    fun provideNetworkInterceptor(appUtils: AppUtils): Interceptor {
+    fun provideNetworkInterceptor(): Interceptor {
 
         return Interceptor { chain: Interceptor.Chain ->
             val builder = chain.request()
@@ -45,7 +45,6 @@ object NetworkingModule {
 
 
         val httpLoggingInterceptor = HttpLoggingInterceptor()
-        //Don't enable this, because uploading video won't work
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
 
         return OkHttpClient().newBuilder()

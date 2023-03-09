@@ -23,7 +23,7 @@ constructor(layoutRest: Int) :
     override fun onAttach(context: Context) {
         super.onAttach(context)
         listener = context as OnProgressLoadingListener
-        hideNoDataFound()
+//        hideNoDataFound()
 
     }
 
